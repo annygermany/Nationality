@@ -5,7 +5,8 @@ public class Main {
 
         String[] deutsche = new String[]{"Hans", "Karl"};
         String[] ukler = new String[]{"John", "Jack"};
-        Testo taste = new Testo(deutsche,ukler);
+        String[] itler = new String[]{"Maria", "Mammamia"};
+        Testo taste = new Testo(deutsche,ukler,itler);
 
     }
 
