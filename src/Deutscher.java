@@ -1,24 +1,30 @@
-public class Deutscher {
-    public String name;
-    public String chef = "Steinmeier";
+public class Deutscher extends Mensch {
+    public String vorname;
+    public boolean istNeuanlage;
 
-    public Deutscher() {
-        this.name = "Michel";
+    public Deutscher(String vorname, String chef, boolean istNeuanlage) {
+        super(vorname, chef);
+        this.vorname = vorname;
+        this.istNeuanlage = istNeuanlage;
+
     }
 
-    public Deutscher(String name) {
-        this.name = name;
-    }
-
+    @Override
     public String getName() {
-        return this.name;
+        return "--OVERRIDE--" + this.vorname.toUpperCase();
     }
 
     public void getGruss() {
         System.out.println("Guten Tach, mein Name ist " + getName() + ", ich komme aus Dland.");
     }
 
-    public void getchef() {
-        System.out.println("der Staatsoberhaupt ist " + this.chef);
+    public void getChefGruss() {
+        System.out.println("der Staatsoberhaupt ist " + this.getChef());
     }
+
+    public String istNeuanlage() {
+        return istNeuanlage ? getName() +  " wurde neu angelegt" : getName() +  " besteht bereits" ;
+
+    }
+
 }

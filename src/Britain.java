@@ -19,7 +19,7 @@ public class Britain {
         System.out.println("Hi my name is " + getName());
     }
 
-    public void getchef() {
+    public void getChefGruss() {
         System.out.println("our head of the kingdom is " +this.chef);
     }
 }
